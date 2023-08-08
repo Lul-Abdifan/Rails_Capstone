@@ -1,4 +1,4 @@
-.new-user {
+.new-user,.new-food {
   max-width: 400px;
   margin: 100px auto;
   padding: 20px;
@@ -36,3 +36,39 @@ form input[type="submit"] {
 form input[type="submit"]:hover {
   background-color: #0056b3;
 }
+
+.food-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .food-table {
+    margin-top:150px;
+    width: 80%;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td {
+    text-align: left;
+    padding: 15px;
+  }
+  
+  th {
+    background-color: #ddd;
+    padding:6px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  td:last-child {
+    text-align: center;
+  }
+  
