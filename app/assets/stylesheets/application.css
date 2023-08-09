@@ -36,19 +36,24 @@ form input[type="submit"] {
 form input[type="submit"]:hover {
   background-color: #0056b3;
 }
+
 /* recipe card */
+
 /* .recipe_card {
   border: 1px solid #000;
   padding: 10px;
   margin: 10px;
   background-color: #f9f9f9;
 } */
+
 /* form */
-.form_cont{
+.form_cont {
   display: flex;
   justify-content: center;
 }
+
 /* edit */
+
 /* In your CSS file */
 .center-content {
   display: flex;
@@ -57,7 +62,9 @@ form input[type="submit"]:hover {
   justify-content: center;
   text-align: center;
 }
+
 /* Recipe details page */
+
 /* Center the card */
 .recipe-card-container {
   display: flex;
@@ -95,29 +102,29 @@ form input[type="submit"]:hover {
   text-decoration: none;
   margin-right: 10px;
   border: none;
-
 }
+
 .btn-link:hover {
   color: green;
 }
+
 .recipe_lk {
   color: rgb(13, 13, 75);
   text-decoration: none;
 }
+
 .recipe_lk:hover {
   color: green;
 }
+
 .button {
   border: none;
 }
-.btn-link a{
+
+.btn-link a {
   color: rgb(89, 153, 179);
   text-decoration: none;
   margin-right: 10px;
   border: none;
   background-color: #fff;
 }
-
-
-
-
