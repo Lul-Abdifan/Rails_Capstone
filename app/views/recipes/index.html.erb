@@ -1,20 +1,27 @@
-<!-- recipes/index.html.erb -->
 <p style="color: green"><%= notice %></p>
-
-<h1>Recipes</h1>
-
-<div id="recipes">
-  <% @recipes.each do |recipe| %>
-    <div class="recipe_card">
-      <div class="recipe_content">
-        <%= render "recipe_index", recipe: recipe %>
+<div class= "recipe-card">
+  <h1>Recipes</h1>
+ 
+ <div id="recipes">
+  <div class="recipe-list">
+    <% @recipes.each do |recipe| %>
+      <div >
+        <h2><%= recipe.name %></h2>
+        <div class="recipe_content">
+          <%= render "recipe_index", recipe: recipe %>
+          <p>
+            <%= link_to "Show this recipe", recipe, class:"recipe_lk" %>
+          </p>
+        </div>
         <p>
-          <%= link_to "Show this recipe", recipe %>
+          <%= button_to "Remove", recipe, method: :delete, class: "btn-link" %>
         </p>
       </div>
-      <%= button_to "Destroy this recipe", recipe, method: :delete %>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
+ </div>
+<p class= "btn-link">
+  <%= link_to "New recipe", new_recipe_path %>
+</p>
 </div>
 
-<%= link_to "New recipe", new_recipe_path %>

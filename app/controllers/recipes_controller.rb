@@ -16,7 +16,7 @@ class RecipesController < ApplicationController
 
   # GET /recipes/1/edit
   def edit
-    @recipe = Recipe.find(params[:id])
+    # The before_action already sets @recipe, no need to repeat it here.
   end
 
   # POST /recipes or /recipes.json
