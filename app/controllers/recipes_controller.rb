@@ -49,13 +49,20 @@ class RecipesController < ApplicationController
 
   # DELETE /recipes/1 or /recipes/1.json
   def destroy
-    @recipe.destroy
-
-    respond_to do |format|
-      format.html { redirect_to recipes_url, notice: 'Recipe was successfully destroyed.' }
-      format.json { head :no_content }
+    if @recipe.user == current_user
+      @recipe.destroy
+      respond_to do |format|
+        format.html { redirect_to recipes_url, notice: 'Recipe was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to recipes_url, alert: "You don't have permission to delete this recipe." }
+        format.json { head :forbidden }
+      end
     end
   end
+  
 
   private
 
