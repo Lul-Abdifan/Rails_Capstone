@@ -59,35 +59,43 @@ form input[type="submit"]:hover {
 }
 /* Recipe details page */
 /* Center the card */
-.recipe-card-container {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  align-items: center;
-  border: 2px solid black;
-}
 
-/* Style the card container */
+
+
 .recipe-card {
-  border: 2px solid black;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 600px;
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ 
+padding:0px 100px;
+/* margin:0px 100px; */
+ 
 }
 
-/* Style the header within the card */
-.recipe-card h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+
+
+
+
+.recipe-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border:3px black solid;
+  margin-top:30px;
+  padding:0px 50px;
 }
 
-/* Style the paragraphs within the card */
-.recipe-card p {
-  margin: 8px 0;
+
+.btn-link {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
 }
+
+
+
+
+
+
+
 
 /* Style the links within the card */
 .btn-link {
