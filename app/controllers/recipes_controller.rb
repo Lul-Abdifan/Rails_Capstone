@@ -7,22 +7,26 @@ class RecipesController < ApplicationController
   end
 
   # GET /recipes/1 or /recipes/1.json
-  def show; end
+  def show
+    authorize! :read, @recipe
+  end
 
   # GET /recipes/new
   def new
     @recipe = Recipe.new
+    authorize! :create, @recipe
   end
 
   # GET /recipes/1/edit
   def edit
+    authorize! :update, @recipe
     # The before_action already sets @recipe, no need to repeat it here.
   end
 
   # POST /recipes or /recipes.json
   def create
     @recipe = current_user.recipes.build(recipe_params)
-
+    authorize! :create, @recipe
     respond_to do |format|
       if @recipe.save
         format.html { redirect_to recipe_url(@recipe), notice: 'Recipe was successfully created.' }
@@ -36,6 +40,8 @@ class RecipesController < ApplicationController
 
   # PATCH/PUT /recipes/1 or /recipes/1.json
   def update
+    authorize! :update, @recipe
+
     respond_to do |format|
       if @recipe.update(recipe_params)
         format.html { redirect_to recipe_url(@recipe), notice: 'Recipe was successfully updated.' }
@@ -49,18 +55,15 @@ class RecipesController < ApplicationController
 
   # DELETE /recipes/1 or /recipes/1.json
   def destroy
+    authorize! :destroy, @recipe
     if @recipe.user == current_user
       @recipe.destroy
-      respond_to do |format|
-        format.html { redirect_to recipes_url, notice: 'Recipe was successfully destroyed.' }
-        format.json { head :no_content }
-      end
+      redirect_to recipes_url, notice: 'Recipe was successfully destroyed.'
     else
-      respond_to do |format|
-        format.html { redirect_to recipes_url, alert: "You don't have permission to delete this recipe." }
-        format.json { head :forbidden }
-      end
+      redirect_to recipes_url, alert: "You don't have permission to delete this recipe."
     end
+  rescue CanCan::AccessDenied
+    redirect_to recipes_url, alert: "You don't have permission to delete this recipe."
   end
 
   private
