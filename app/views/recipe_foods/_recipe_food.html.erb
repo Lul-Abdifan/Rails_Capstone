@@ -7,12 +7,12 @@
 
   <p>
     <strong>Food:</strong>
-    <%= recipe_food.food_id %>
+    <%= recipe_food.food.name %>
   </p>
 
   <p>
     <strong>Recipe:</strong>
     <%= recipe_food.recipe_id %>
-<%= button_to "Destroy this recipe food", recipe_recipe_food_path(recipe_food), method: :delete, data: { confirm: "Are you sure?" } %>
+ <%= button_to "Destroy this recipe food", recipe_recipe_food_path(recipe_food.recipe_id,recipe_food.id), method: :delete %>
 
 </div>

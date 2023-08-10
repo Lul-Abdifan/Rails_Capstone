@@ -18,7 +18,7 @@
 
   <div>
     <%= form.label :food_id, style: "display: block" %>
-               <%= form.collection_select :food_id, Food.all, :id, :name, { prompt: true }, { class: "form-control" } %>
+               <%= form.collection_select :food_id, current_user.foods, :id, :name, { prompt: true }, { class: "form-control" } %>
 
   </div>
 
