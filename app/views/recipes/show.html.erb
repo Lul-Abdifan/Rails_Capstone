@@ -1,0 +1,26 @@
+<div class="recipe-card-container">
+  <p style="color: green"><%= notice %></p>
+ <div>
+ <h2 class="recipe-name"><%= @recipe.name%></h2>
+ <div class="recipe-show-top">
+ <div>
+ <h2>Preparation time: <%=@recipe.preparation_time%></h2>
+ <h2>Cooking time: <%=@recipe.cooking_time%></h2>
+ <h2><%=@recipe.description%></h2>
+ </div>
+ <div>
+ <h2>Public </h2>
+ </div>
+ </div>
+ <div class="recipe-food-class">
+ <a href="" class="generate-shopping-list">Generate Shopping List </a>
+ <a href="" class="add-ingredient">Add Ingredinet</a>
+ </div>
+ </div>
+
+  <div class="recipe_d_ft">
+
+    <%= link_to "Back to recipes", recipes_path, class: 'btn-link' %>
+    
+  </div>
+</div>

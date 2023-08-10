@@ -38,56 +38,161 @@ form input[type="submit"]:hover {
   background-color: #0056b3;
 }
 
-.food-container {
+/* recipe card */
+.new-recipe-card {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* form */
+.form_cont {
   display: flex;
   justify-content: center;
+}
+
+/* edit */
+
+/* In your CSS file */
+.center-content {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  height: 100%;
-}
-
-.food-table {
-  margin: 100px;
-  width: 80%;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td {
-  text-align: left;
-  padding: 15px;
-}
-
-th {
-  background-color: #ddd;
-  padding: 6px;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-td:last-child {
+  justify-content: center;
   text-align: center;
 }
 
-.notification {
+.recipe-card {
+  padding: 0 100px;
+}
+
+.recipe-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  border: 3px black solid;
+  margin-top: 30px;
+  padding: 0 50px;
 }
 
-.add-food {
-  display: flex;
-  padding-right: 100px;
-  justify-content: end;
-}
-
-.add-food a {
-  border: 2px solid black;
-  padding: 10px;
-  color: orange;
+.btn-link {
+  color: rgb(89, 153, 179);
   text-decoration: none;
+  margin-right: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.recipe-show-top {
+  display: flex;
+  justify-content: space-around;
+  color: rgba(27, 26, 25, 0.788);
+}
+
+.recipe-name {
+  text-align: center;
+}
+
+.recipe-food-class {
+  margin-top: 30px;
+  font-size: large;
+  display: flex;
+  justify-content: space-around;
+}
+
+.recipe-food-class a {
+  text-decoration: none;
+  border: 2px solid black;
+  padding: 3px;
+}
+
+/* Style the links within the card */
+
+.btn-link:hover {
+  color: green;
+}
+
+.recipe_lk {
+  color: rgb(13, 13, 75);
+  text-decoration: none;
+}
+
+.recipe_lk:hover {
+  color: green;
+}
+
+.button {
+  border: none;
+}
+
+.btn-link a {
+  color: rgb(89, 153, 179);
+  text-decoration: none;
+  margin-right: 10px;
+  border: none;
+  background-color: #fff;
+
+  .food-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .food-table {
+    margin: 100px;
+    width: 80%;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td {
+    text-align: left;
+    padding: 15px;
+  }
+
+  th {
+    background-color: #ddd;
+    padding: 6px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  td:last-child {
+    text-align: center;
+  }
+
+  .notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .add-food {
+    display: flex;
+    padding-right: 100px;
+    justify-content: end;
+  }
+
+  .add-food a {
+    border: 2px solid black;
+    padding: 10px;
+    color: orange;
+    text-decoration: none;
+  }
+
+  .description a {
+    text-decoration: none;
+    color: black;
+  }
 }
