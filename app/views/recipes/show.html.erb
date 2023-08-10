@@ -1,26 +1,44 @@
 <div class="recipe-card-container">
   <p style="color: green"><%= notice %></p>
- <div>
- <h2 class="recipe-name"><%= @recipe.name%></h2>
- <div class="recipe-show-top">
- <div>
- <h2>Preparation time: <%=@recipe.preparation_time%></h2>
- <h2>Cooking time: <%=@recipe.cooking_time%></h2>
- <h2><%=@recipe.description%></h2>
- </div>
- <div>
- <h2>Public </h2>
- </div>
- </div>
- <div class="recipe-food-class">
- <a href="" class="generate-shopping-list">Generate Shopping List </a>
- <a href="" class="add-ingredient">Add Ingredinet</a>
- </div>
- </div>
+  <div>
+    <h2 class="recipe-name"><%= @recipe.name %></h2>
+    <div class="recipe-show-top">
+      <div>
+        <h2>Preparation time: <%= @recipe.preparation_time %></h2>
+        <h2>Cooking time: <%= @recipe.cooking_time %></h2>
+        <h2><%= @recipe.description %></h2>
+      </div>
+      <div>
+        <h2>Public</h2>
+        <label class="switch">
+          <input id="public-toggle" type="checkbox" <%= @recipe.public ? 'checked' : '' %>>
+          <span class="slider <%= @recipe.public ? 'public' : '' %>"></span>
+        </label>
+      </div>
+    </div>
+   <div class="recipe-food-class">
+     <% if @recipe.user == current_user %>
+       <%= link_to "Add Ingredient", new_recipe_food_path(@recipe), class: 'add-ingredient' %>
+     <% end %>
+     <a href="" class="generate-shopping-list">Generate Shopping List</a>
+   </div>
+
+  </div>
 
   <div class="recipe_d_ft">
-
     <%= link_to "Back to recipes", recipes_path, class: 'btn-link' %>
-    
   </div>
 </div>
+
+<script>
+  const publicToggle = document.getElementById("public-toggle");
+  const publicSlider = document.querySelector(".slider");
+
+  publicToggle.addEventListener("change", function() {
+    if (publicToggle.checked) {
+      publicSlider.classList.add("public");
+    } else {
+      publicSlider.classList.remove("public");
+    }
+  });
+</script>
