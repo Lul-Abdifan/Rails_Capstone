@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   # root "users#index"
   resources :foods, only: [:new, :create, :index, :destroy]
   resources :recipes do
-    resources :recipe_foods
+    resources :recipe_foods, only: [:new, :create, :index, :destroy]
   end
 end
