@@ -110,6 +110,7 @@ form input[type="submit"]:hover {
   border: 2px solid black;
   padding: 3px;
 }
+
 /* Style the links within the card */
 
 .btn-link:hover {
