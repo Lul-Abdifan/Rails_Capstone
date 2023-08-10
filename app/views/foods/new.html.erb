@@ -1,0 +1,23 @@
+<%= form_with model: @food,url:foods_path , method: :post do |form|%>
+<div class="new-food">
+    <h3 class="new-food-header">We are delighted to have you here!</h3>
+   <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+   <div>
+    <%= form.label :measurement_unit %>
+    <%= form.text_field :measurement_unit %>
+  </div>
+   <div>
+    <%= form.label :price%>
+    <%= form.text_field :price%>
+  </div>
+   <div>
+    <%= form.label :quantity %>
+    <%= form.text_field :quantity %>
+  </div>
+    <div>
+    <%= form.submit "Create Food" %>
+  </div>
+<%end%>
