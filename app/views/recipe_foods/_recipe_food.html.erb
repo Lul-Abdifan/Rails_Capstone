@@ -1,4 +1,5 @@
 <div id="<%= dom_id recipe_food %>">
+
   <p>
     <strong>Quantity:</strong>
     <%= recipe_food.quantity %>
@@ -12,6 +13,6 @@
   <p>
     <strong>Recipe:</strong>
     <%= recipe_food.recipe_id %>
-  </p>
+<%= button_to "Destroy this recipe food", recipe_recipe_food_path(recipe_food), method: :delete, data: { confirm: "Are you sure?" } %>
 
 </div>

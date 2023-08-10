@@ -13,8 +13,12 @@
  </div>
  </div>
  <div class="recipe-food-class">
- <a render= "recipes_foods/form" class="generate-shopping-list">Generate Shopping List </a>
- <a href="" class="add-ingredient">Add Ingredinet</a>
+ <%= link_to "Back to recipes", recipes_path, class: "btn-link" %>
+                   
+ <a href="">Generate Shopping List</a>
+<a href="/recipes/<%= params[:id] %>/recipe_foods/new" class="add-ingredient">Add Ingredient</a>
+
+
  </div>
  </div>
 
