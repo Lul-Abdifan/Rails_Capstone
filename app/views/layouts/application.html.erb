@@ -15,21 +15,12 @@
   </head>
 
   <body>
-       <div class="notification">
+    
+       <%= render "shared/navigation" %> 
+          <div class="notification">
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
-          </div>
-
-     <% if user_signed_in? %>
-   
-  <%= link_to destroy_user_session_path, method: :delete do %>
-    <i class="fas fa-sign-out-alt"></i> Sign Out
-  <% end %>
-
-  
-
-<% end %>
-
-    <%= yield %>
+       </div>
+  <%= yield %>
   </body>
 </html>
