@@ -50,18 +50,17 @@ class RecipesController < ApplicationController
       end
     end
   end
-  
+
   def toggle_public
     authorize! :update, @recipe
-  
+
     new_public_status = !@recipe.public
     if @recipe.update(public: new_public_status)
       render json: { public: new_public_status }, status: :ok
     else
-      render json: { error: "Failed to toggle public status" }, status: :unprocessable_entity
+      render json: { error: 'Failed to toggle public status' }, status: :unprocessable_entity
     end
   end
-  
 
   # DELETE /recipes/1 or /recipes/1.json
   def destroy
