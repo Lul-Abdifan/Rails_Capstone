@@ -2,7 +2,7 @@
 .new-user,
 .new-food {
   max-width: 400px;
-  margin: 100px auto;
+  margin: 50px auto;
   padding: 20px;
   border: 2px solid #ccc;
   border-radius: 10px;
@@ -13,6 +13,12 @@ form label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
 }
 
 form input[type="text"],
@@ -32,13 +38,6 @@ form input[type="submit"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-}
-
-.food-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
 }
 
 .food-table {
@@ -190,8 +189,6 @@ nav a:hover {
   color: rgba(27, 26, 25, 0.788);
 }
 
-
-
 /* Style the links within the card */
 
 .btn-link:hover {
@@ -211,137 +208,11 @@ nav a:hover {
   border: none;
 }
 
-.foods-for-recipe {
-  padding: 30px 100px;
-}
-
-.destroy-button {
-  background-color: #f00 !important;
-  color: white;
-  border: none;
-
-  padding: 5px 10px;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 4px;
-}
-
-.destroy-button:hover {
-  background-color: #c00;
-}
-
-.shopping-header {
-  text-align: center;
-  font-size: 45px;
-  color: rgba(20, 18, 18, 0.651);
-}
-
-.shopping-list {
-  margin-top: 100px;
-  padding: 0 250px;
-}
-
-.shopping-table-header {
-  display: flex;
-  justify-content: space-evenly;
-  font-size: 25px;
-  color: rgba(20, 18, 18, 0.651);
-}
-
-.form-attribute {
-  margin: 30px 0;
-}
-
-input,
-select {
-  width: 100%;
-}
-
-.recipe-food-header {
-  text-align: center;
-  color: rgba(20, 18, 18, 0.651);
-}
-
-nav ul {
-  list-style: none;
-  justify-content: center;
-  padding: 10px 0;
-  margin: 5px 270px;
-  display: flex;
-  background-color: #333;
-  border-radius: 20px;
-}
-
-nav li {
-  margin-right: 10px;
-}
-
-nav li:last-child {
-  margin-right: 0;
-}
-
-nav i {
-  margin-right: 5px;
-  background-color: #fff;
-}
-
 .food-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-}
-
-.food-table {
-  margin: 100px;
-  width: 80%;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td {
-  text-align: left;
-  padding: 15px;
-}
-
-th {
-  background-color: #ddd;
-  padding: 6px;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-td:last-child {
-  text-align: center;
-}
-
-.notification {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.add-food {
-  display: flex;
-  padding-right: 100px;
-  justify-content: end;
-}
-
-.add-food a {
-  border: 2px solid black;
-  padding: 10px;
-  color: orange;
-  text-decoration: none;
-}
-
-.description a {
-  text-decoration: none;
-  color: black;
 }
 
 .description a:hover {
@@ -397,4 +268,71 @@ td:last-child {
 
 input:checked + .slider::before {
   transform: translateX(26px);
+}
+
+.foods-for-recipe {
+  padding: 30px 100px;
+}
+
+.destroy-button {
+  background-color: #f00 !important;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.destroy-button:hover {
+  background-color: #c00;
+}
+
+.shopping-header {
+  text-align: center;
+  font-size: 45px;
+  color: rgba(20, 18, 18, 0.651);
+}
+
+.shopping-list {
+  margin-top: 100px;
+  padding: 0 250px;
+}
+
+.shopping-table-header {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 25px;
+  color: rgba(20, 18, 18, 0.651);
+}
+
+.form-attribute {
+  margin: 30px 0;
+}
+
+.recipe-food-header {
+  text-align: center;
+  color: rgba(20, 18, 18, 0.651);
+}
+
+nav ul {
+  list-style: none;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 5px 50px;
+  display: flex;
+  background-color: #333;
+  border-radius: 20px;
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav i {
+  margin-right: 5px;
 }
