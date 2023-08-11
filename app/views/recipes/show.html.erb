@@ -9,7 +9,7 @@
         <h2><%= @recipe.description %></h2>
       </div>
       <div>
-        <h2>Public</h2>
+        <h2><span id="public-status"><%= @recipe.public ? 'Public' : 'Private' %></span></h2>
         <label class="switch">
           <input id="public-toggle" type="checkbox" <%= @recipe.public ? 'checked' : '' %>>
           <span class="slider <%= @recipe.public ? 'public' : '' %>"></span>
@@ -33,12 +33,17 @@
 <script>
   const publicToggle = document.getElementById("public-toggle");
   const publicSlider = document.querySelector(".slider");
+  const publicStatus = document.getElementById("public-status");
 
   publicToggle.addEventListener("change", function() {
     if (publicToggle.checked) {
       publicSlider.classList.add("public");
+      publicStatus.textContent = 'Public';
+      <%= @recipe.public = true %>;
     } else {
       publicSlider.classList.remove("public");
+      publicStatus.textContent = 'Private';
+      <%= @recipe.public = false %>;
     }
   });
 </script>
