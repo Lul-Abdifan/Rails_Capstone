@@ -15,6 +15,12 @@ form label {
   margin-bottom: 5px;
 }
 
+input,
+select,
+textarea {
+  width: 100%;
+}
+
 form input[type="text"],
 form textarea {
   padding: 2px 0;
@@ -204,24 +210,11 @@ nav a:hover {
   border: none;
 }
 
-.btn-link a {
-  color: rgb(89, 153, 179);
-  text-decoration: none;
-  margin-right: 10px;
-  border: none;
-  background-color: #fff;
-}
-
 .food-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-}
-
-.description a {
-  text-decoration: none;
-  color: black;
 }
 
 .description a:hover {
@@ -239,11 +232,6 @@ nav a:hover {
   display: inline-block;
   width: 60px;
   height: 34px;
-}
-
-input,
-select,textarea {
-  width: 100%;
 }
 
 .switch input {
@@ -350,4 +338,3 @@ nav li:last-child {
 nav i {
   margin-right: 5px;
 }
-
