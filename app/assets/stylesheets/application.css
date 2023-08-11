@@ -26,7 +26,7 @@ form textarea {
 
 /* Style for the form submit button */
 form input[type="submit"] {
-  background-color: rgba(255, 94, 0, 0.678);
+  background-color: rgb(119, 0, 255);
   color: #fff;
   padding: 10px 10px;
   border: none;
@@ -81,11 +81,51 @@ td:last-child {
   justify-content: end;
 }
 
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+}
+
 .add-food a {
   border: 2px solid black;
   padding: 10px;
   color: orange;
   text-decoration: none;
+}
+
+.description a {
+  text-decoration: none;
+  color: black;
+}
+
+.recipe-food-class {
+  margin-top: 30px;
+  font-size: large;
+  display: flex;
+  justify-content: space-around;
+}
+
+.recipe-food-class a {
+  text-decoration: none;
+  border: 2px solid black;
+  padding: 3px;
+}
+
+.btn-link a {
+  color: rgb(89, 153, 179);
+  text-decoration: none;
+  margin-right: 10px;
+  border: none;
+  background-color: #fff;
+}
+
+nav a:hover {
+  background-color: #43086171;
+  color: orangered;
+  font-weight: bolder;
 }
 
 .new-recipe-card {
@@ -150,18 +190,7 @@ td:last-child {
   color: rgba(27, 26, 25, 0.788);
 }
 
-.recipe-food-class {
-  margin-top: 30px;
-  font-size: large;
-  display: flex;
-  justify-content: space-around;
-}
 
-.recipe-food-class a {
-  text-decoration: none;
-  border: 2px solid black;
-  padding: 3px;
-}
 
 /* Style the links within the card */
 
@@ -182,79 +211,12 @@ td:last-child {
   border: none;
 }
 
-.btn-link a {
-  color: rgb(89, 153, 179);
-  text-decoration: none;
-  margin-right: 10px;
-  border: none;
-  background-color: #fff;
-
-  .food-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-
-  .food-table {
-    margin: 100px;
-    width: 80%;
-  }
-
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-
-  td {
-    text-align: left;
-    padding: 15px;
-  }
-
-  th {
-    background-color: #ddd;
-    padding: 6px;
-  }
-
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-
-  td:last-child {
-    text-align: center;
-  }
-
-  .notification {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .add-food {
-    display: flex;
-    padding-right: 100px;
-    justify-content: end;
-  }
-
-  .add-food a {
-    border: 2px solid black;
-    padding: 10px;
-    color: orange;
-    text-decoration: none;
-  }
-
-  .description a {
-    text-decoration: none;
-    color: black;
-  }
-}
-
 .foods-for-recipe {
   padding: 30px 100px;
 }
 
 .destroy-button {
-  background-color: #f00;
+  background-color: #f00 !important;
   color: white;
   border: none;
   padding: 5px 10px;
@@ -297,4 +259,27 @@ select {
 .recipe-food-header {
   text-align: center;
   color: rgba(20, 18, 18, 0.651);
+}
+
+nav ul {
+  list-style: none;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 5px 270px;
+  display: flex;
+  background-color: #333;
+  border-radius: 20px;
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav i {
+  margin-right: 5px;
+}
 }
