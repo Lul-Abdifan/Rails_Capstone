@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+  
     const deleteForms = document.querySelectorAll('.delete-form');
   
     deleteForms.forEach(form => {
@@ -7,13 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
   
         const foodRow = form.closest('.food-row');
         const deleteUrl = form.getAttribute('action');
-        const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
   
         const response = await fetch(deleteUrl, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',
-            'X-CSRF-Token': csrfToken
+            'X-CSRF-Token': csrfToken // Use the retrieved CSRF token here
           }
         });
   
