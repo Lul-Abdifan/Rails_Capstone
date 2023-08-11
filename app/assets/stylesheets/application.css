@@ -88,8 +88,6 @@ td:last-child {
   text-decoration: none;
 }
 
-
-/* recipe card */
 .new-recipe-card {
   border: 2px solid black;
   border-radius: 10px;
@@ -106,9 +104,6 @@ td:last-child {
   justify-content: center;
 }
 
-/* edit */
-
-/* In your CSS file */
 .center-content {
   display: flex;
   flex-direction: column;
