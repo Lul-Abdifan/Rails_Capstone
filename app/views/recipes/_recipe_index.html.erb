@@ -1,13 +1,13 @@
 <div class="recipe-list">
       <div>
-        <h2><%= recipe.name %></h2>
+        <h2><%= link_to recipe.name,recipe ,class:"recipe-name"%></h2>
         <p>   <% if current_user.id  == recipe.user.id%> 
-             <%= button_to "Remove", recipe, method: :delete, class: "btn-link" %>
+             <%= button_to "Remove", recipe, method: :delete, class: "destroy-button" %>
              <%end%>
         </p>
       </div>
       <div class="description">
-        <%= link_to recipe.description, recipe %>
+        <%=  recipe.description %>
       </div>
 </div>
 
