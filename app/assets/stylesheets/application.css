@@ -1,3 +1,4 @@
+.new-recipe-food,
 .new-user,
 .new-food {
   max-width: 400px;
@@ -16,8 +17,7 @@ form label {
 
 form input[type="text"],
 form textarea {
-  width: 100%;
-  padding: 10px;
+  padding: 2px 0;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -26,16 +26,12 @@ form textarea {
 
 /* Style for the form submit button */
 form input[type="submit"] {
-  background-color: #007bff;
+  background-color: rgba(255, 94, 0, 0.678);
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-}
-
-form input[type="submit"]:hover {
-  background-color: #0056b3;
 }
 
 .food-container {
@@ -134,6 +130,16 @@ td:last-child {
   padding: 0 50px;
 }
 
+.recipe-name {
+  color: rgba(39, 37, 37, 0.726);
+  text-decoration: none;
+  text-align: center;
+}
+
+.recipe-name:hover {
+  color: orangered;
+}
+
 .btn-link {
   color: rgb(89, 153, 179);
   text-decoration: none;
@@ -147,10 +153,6 @@ td:last-child {
   display: flex;
   justify-content: space-around;
   color: rgba(27, 26, 25, 0.788);
-}
-
-.recipe-name {
-  text-align: center;
 }
 
 .recipe-food-class {
@@ -251,35 +253,53 @@ td:last-child {
     color: black;
   }
 }
-.foods-for-recipe{
-  padding:30px 100px;
-  
+
+.foods-for-recipe {
+  padding: 30px 100px;
 }
 
 .destroy-button {
-  background-color: #ff0000; 
-  color: white; 
-  border: none; 
-  padding: 5px 10px; 
-  cursor: pointer; 
-  font-weight: bold; 
-  border-radius: 4px; 
+  background-color: #f00;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
 }
+
 .destroy-button:hover {
-  background-color: #cc0000; 
+  background-color: #c00;
 }
-.shopping-header{
+
+.shopping-header {
   text-align: center;
   font-size: 45px;
   color: rgba(20, 18, 18, 0.651);
 }
-.shopping-list{
+
+.shopping-list {
   margin-top: 100px;
-  padding: 0px 250px;
+  padding: 0 250px;
 }
-.shopping-table-header{
+
+.shopping-table-header {
   display: flex;
   justify-content: space-evenly;
   font-size: 25px;
+  color: rgba(20, 18, 18, 0.651);
+}
+
+.form-attribute {
+  margin: 30px 0;
+}
+
+input,
+select {
+  width: 100%;
+}
+
+.recipe-food-header {
+  text-align: center;
   color: rgba(20, 18, 18, 0.651);
 }
