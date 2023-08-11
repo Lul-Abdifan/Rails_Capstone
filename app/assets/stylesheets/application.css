@@ -34,13 +34,6 @@ form input[type="submit"] {
   cursor: pointer;
 }
 
-.food-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
 .food-table {
   margin: 100px;
   width: 80%;
@@ -197,53 +190,6 @@ td:last-child {
   height: 100%;
 }
 
-.food-table {
-  margin: 100px;
-  width: 80%;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td {
-  text-align: left;
-  padding: 15px;
-}
-
-th {
-  background-color: #ddd;
-  padding: 6px;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-td:last-child {
-  text-align: center;
-}
-
-.notification {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.add-food {
-  display: flex;
-  padding-right: 100px;
-  justify-content: end;
-}
-
-.add-food a {
-  border: 2px solid black;
-  padding: 10px;
-  color: orange;
-  text-decoration: none;
-}
-
 .description a {
   text-decoration: none;
   color: black;
@@ -264,6 +210,11 @@ td:last-child {
   display: inline-block;
   width: 60px;
   height: 34px;
+}
+
+input,
+select {
+  width: 100%;
 }
 
 .switch input {
@@ -342,11 +293,6 @@ input:checked + .slider::before {
 
 .form-attribute {
   margin: 30px 0;
-}
-
-input,
-select {
-  width: 100%;
 }
 
 .recipe-food-header {
