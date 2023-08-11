@@ -1,4 +1,5 @@
 <div class="recipe-card-container">
+
  <div>
  <h2 class="recipe-name"><%= @recipe.name%></h2>
  <div class="recipe-show-top">
@@ -53,10 +54,67 @@
 
 
  </div>
+  <p style="color: green"><%= notice %></p>
+  <div>
+    <h2 class="recipe-name"><%= @recipe.name %></h2>
+    <div class="recipe-show-top">
+      <div>
+        <h2>Preparation time: <%= format_time(@recipe.preparation_time) %></h2>
+        <h2>Cooking time: <%= format_time(@recipe.cooking_time) %></h2>
+        <h2><%= @recipe.description %></h2>
+      </div>
+      <div>
+        <h2><span id="public-status"><%= @recipe.public ? 'Public' : 'Private' %></span></h2>
+        <label class="switch">
+          <input id="public-toggle" type="checkbox" <%= @recipe.public ? 'checked' : '' %>>
+          <span class="slider <%= @recipe.public ? 'public' : '' %>"></span>
+        </label>
+      </div>
+    </div>
+   <div class="recipe-food-class">
+     <% if @recipe.user == current_user %>
+       <%= link_to "Add Ingredient", new_recipe_food_path(@recipe), class: 'add-ingredient' %>
+     <% end %>
+     <a href="" class="generate-shopping-list">Generate Shopping List</a>
+   </div>
+
+
+  </div>
 
   <div class="recipe_d_ft">
-
     <%= link_to "Back to recipes", recipes_path, class: 'btn-link' %>
-    
   </div>
 </div>
+
+<script>
+  const publicToggle = document.getElementById("public-toggle");
+  const publicSlider = document.querySelector(".slider");
+  const publicStatus = document.getElementById("public-status");
+
+  publicToggle.addEventListener("change", function() {
+    const newStatus = publicToggle.checked;
+
+    fetch("<%= toggle_public_recipe_path(@recipe) %>", {
+      method: "PATCH",
+      headers: {
+        "X-CSRF-Token": "<%= form_authenticity_token %>",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ public: newStatus }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.public) {
+          publicSlider.classList.add("public");
+          publicStatus.textContent = 'Public';
+        } else {
+          publicSlider.classList.remove("public");
+          publicStatus.textContent = 'Private';
+        }
+      })
+      .catch(error => {
+        console.error("Error toggling public status:", error);
+      });
+  });
+</script>
+
