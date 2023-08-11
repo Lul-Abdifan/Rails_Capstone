@@ -2,7 +2,7 @@
 .new-user,
 .new-food {
   max-width: 400px;
-  margin: 100px auto;
+  margin: 50px auto;
   padding: 20px;
   border: 2px solid #ccc;
   border-radius: 10px;
@@ -242,7 +242,7 @@ nav a:hover {
 }
 
 input,
-select {
+select,textarea {
   width: 100%;
 }
 
@@ -333,7 +333,7 @@ nav ul {
   list-style: none;
   justify-content: center;
   padding: 10px 0;
-  margin: 5px 270px;
+  margin: 5px 50px;
   display: flex;
   background-color: #333;
   border-radius: 20px;
