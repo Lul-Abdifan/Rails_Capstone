@@ -302,13 +302,13 @@ input:checked + .slider::before {
 
 /* style for public_recipe */
 
-.recipe-list {
+.p_recipe-list {
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
 }
 
-.recipe-card {
+.p_recipe-card {
   display: flex;
   justify-content: space-between;
   border: 2.6px solid #252121;
@@ -320,15 +320,15 @@ input:checked + .slider::before {
   transition: transform 0.2s;
 }
 
-.recipe-card:hover {
+.p_recipe-card:hover {
   transform: translateY(-5px);
 }
 
-.recipe-card h2 {
+.p_recipe-card h2 {
   margin: 0;
 }
 
-.recipe-card p {
+.p_recipe-card p {
   margin: 5px 0;
 }
 
