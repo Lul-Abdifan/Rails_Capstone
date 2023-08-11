@@ -15,7 +15,7 @@
  <div class="recipe-food-class">
  <%= link_to "Back to recipes", recipes_path, class: "btn-link" %>
    <% if current_user.id == @recipe.user.id%>                
- <a href="">Generate Shopping List</a>
+ <a href="/shopping_lists">Generate Shopping List</a>
  
 <a href="/recipes/<%= params[:id] %>/recipe_foods/new" class="add-ingredient">Add Ingredient</a>
 
@@ -33,14 +33,18 @@
 
   <% @recipe_foods.each do |recipe_food| %>
     <tr>
+    <% if recipe_food.quantity && recipe_food.food %>
       <td><%= recipe_food.food.name %></td>
        <td><%= "#{recipe_food.quantity} #{recipe_food.food.measurement_unit}" %></td>
+       
       <td>$ <%= recipe_food.quantity * recipe_food.food.price %></td>
+
       <td>
       <% if current_user.id == @recipe.user.id%> 
       <%= button_to "Remove", recipe_recipe_food_path(recipe_food.recipe_id,recipe_food.id), method: :delete, class: "destroy-button"  %>
       <%end%>
       </td>
+      <%end%>
     </tr>
   <%end%>
 </table>

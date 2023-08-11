@@ -1,8 +1,9 @@
 <div class="recipe-list">
       <div>
         <h2><%= recipe.name %></h2>
-        <p>
+        <p>   <% if current_user.id  == recipe.user.id%> 
              <%= button_to "Remove", recipe, method: :delete, class: "btn-link" %>
+             <%end%>
         </p>
       </div>
       <div class="description">
