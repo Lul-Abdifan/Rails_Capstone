@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  before_action :set_recipe, only: %i[show edit update destroy]
+  before_action :set_recipe, only: %i[show edit update destroy toggle_public]
 
   # GET /recipes or /recipes.json
   def index
@@ -19,7 +19,6 @@ class RecipesController < ApplicationController
   # GET /recipes/1/edit
   def edit
     authorize! :update, @recipe
-    # The before_action already sets @recipe, no need to repeat it here.
   end
 
   # POST /recipes or /recipes.json
@@ -51,6 +50,18 @@ class RecipesController < ApplicationController
       end
     end
   end
+  
+  def toggle_public
+    authorize! :update, @recipe
+  
+    new_public_status = !@recipe.public
+    if @recipe.update(public: new_public_status)
+      render json: { public: new_public_status }, status: :ok
+    else
+      render json: { error: "Failed to toggle public status" }, status: :unprocessable_entity
+    end
+  end
+  
 
   # DELETE /recipes/1 or /recipes/1.json
   def destroy
@@ -67,12 +78,10 @@ class RecipesController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_recipe
     @recipe = Recipe.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def recipe_params
     params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description, :public, :user_id)
   end
