@@ -188,65 +188,120 @@ td:last-child {
   margin-right: 10px;
   border: none;
   background-color: #fff;
+}
 
-  .food-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
+.food-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 
-  .food-table {
-    margin: 100px;
-    width: 80%;
-  }
+.food-table {
+  margin: 100px;
+  width: 80%;
+}
 
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
 
-  td {
-    text-align: left;
-    padding: 15px;
-  }
+td {
+  text-align: left;
+  padding: 15px;
+}
 
-  th {
-    background-color: #ddd;
-    padding: 6px;
-  }
+th {
+  background-color: #ddd;
+  padding: 6px;
+}
 
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
-  td:last-child {
-    text-align: center;
-  }
+td:last-child {
+  text-align: center;
+}
 
-  .notification {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .add-food {
-    display: flex;
-    padding-right: 100px;
-    justify-content: end;
-  }
+.add-food {
+  display: flex;
+  padding-right: 100px;
+  justify-content: end;
+}
 
-  .add-food a {
-    border: 2px solid black;
-    padding: 10px;
-    color: orange;
-    text-decoration: none;
-  }
+.add-food a {
+  border: 2px solid black;
+  padding: 10px;
+  color: orange;
+  text-decoration: none;
+}
 
-  .description a {
-    text-decoration: none;
-    color: black;
-  }
+.description a {
+  text-decoration: none;
+  color: black;
+}
+
+.description a:hover {
+  color: green;
+  text-decoration: wavy;
+}
+
+.public {
+  background-color: green;
+}
+
+/* styles for toggle */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.slider.public {
+  background-color: #4caf50;
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
 }
 
 .foods-for-recipe {
