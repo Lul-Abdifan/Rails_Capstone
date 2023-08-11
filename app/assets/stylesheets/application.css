@@ -299,3 +299,39 @@ input:checked + .slider::before {
   text-align: center;
   color: rgba(20, 18, 18, 0.651);
 }
+
+/* style for public_recipe */
+
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.recipe-card {
+  display: flex;
+  justify-content: space-between;
+  border: 2.6px solid #252121;
+  padding: 10px;
+  margin: 10px;
+  width: calc(33.33% - 20px); /* Adjust as needed for your layout */
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-card h2 {
+  margin: 0;
+}
+
+.recipe-card p {
+  margin: 5px 0;
+}
+
+.public_name {
+  text-decoration: none;
+}
