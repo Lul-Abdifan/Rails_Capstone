@@ -68,6 +68,12 @@ td:last-child {
   text-align: center;
 }
 
+.notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .add-food {
   display: flex;
   padding-right: 100px;
@@ -213,11 +219,6 @@ nav a:hover {
 
 .button {
   border: none;
-}
-
-.recipe-name :hover {
-  color: orangered;
-  text-decoration: none;
 }
 
 .food-container {
