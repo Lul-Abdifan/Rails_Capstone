@@ -68,12 +68,6 @@ td:last-child {
   text-align: center;
 }
 
-.notification {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .add-food {
   display: flex;
   padding-right: 100px;
@@ -155,15 +149,6 @@ nav a:hover {
   padding: 0 100px;
 }
 
-.recipe-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 3px black solid;
-  margin-top: 30px;
-  padding: 0 50px;
-}
-
 .recipe-name {
   color: rgba(39, 37, 37, 0.726);
   text-decoration: none;
@@ -206,6 +191,11 @@ nav a:hover {
 
 .button {
   border: none;
+}
+
+.recipe-name :hover {
+  color: orangered;
+  text-decoration: none;
 }
 
 .food-container {
@@ -313,42 +303,6 @@ input:checked + .slider::before {
 .recipe-food-header {
   text-align: center;
   color: rgba(20, 18, 18, 0.651);
-}
-
-/* style for public_recipe */
-
-.p_recipe-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.p_recipe-card {
-  display: flex;
-  justify-content: space-between;
-  border: 2.6px solid #252121;
-  padding: 10px;
-  margin: 10px;
-  width: calc(33.33% - 20px);
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-}
-
-.p_recipe-card:hover {
-  transform: translateY(-5px);
-}
-
-.p_recipe-card h2 {
-  margin: 0;
-}
-
-.p_recipe-card p {
-  margin: 5px 0;
-}
-
-.public_name {
-  text-decoration: none;
 }
 
 nav ul {
