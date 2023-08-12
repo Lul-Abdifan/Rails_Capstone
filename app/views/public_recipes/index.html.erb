@@ -1,4 +1,4 @@
-<h1>Public Recipes</h1>
+<h1 class="recipe-food-header">Public Recipes</h1>
 <div class="p_recipe-list">
   <% @public_recipes.each do |recipe| %>
     <%= render partial: 'public_recipes/public_recipes', locals: { recipe: recipe } %>
