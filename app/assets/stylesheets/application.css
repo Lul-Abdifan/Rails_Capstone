@@ -15,6 +15,10 @@ form label {
   margin-bottom: 5px;
 }
 
+.actions {
+  margin: 15px 0;
+}
+
 input,
 select,
 textarea {
@@ -46,30 +50,39 @@ form input[type="submit"] {
 }
 
 table {
+  width: 100%; /* Make the table span the entire available width */
+  table-layout: auto;
   border-collapse: collapse;
-  width: 100%;
-}
-
-td {
-  text-align: left;
-  padding: 15px;
-}
-
-th {
-  background-color: #ddd;
-  padding: 6px;
+  border: 2px solid #000;
 }
 
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-td:last-child {
-  text-align: center;
+td,
+th {
+  text-align: left;
+  padding-left: 3px;
+}
+
+td {
+  padding: 8px 3px; /* Adds space inside each cell */
+  text-align: left; /* Aligns cell content to the left */
+}
+
+th {
+  background-color: #ddd;
+}
+
+th:not(:first-child),
+td:not(:first-child) {
+  border-left: 2px solid #000;
 }
 
 .notification {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
