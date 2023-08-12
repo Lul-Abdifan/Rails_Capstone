@@ -349,6 +349,7 @@ input:checked + .slider::before {
 
 .public_name {
   text-decoration: none;
+}
 
 nav ul {
   list-style: none;
