@@ -68,6 +68,12 @@ td:last-child {
   text-align: center;
 }
 
+.notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .add-food {
   display: flex;
   padding-right: 100px;
@@ -149,6 +155,15 @@ nav a:hover {
   padding: 0 100px;
 }
 
+.recipe-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px black solid;
+  margin-top: 30px;
+  padding: 0 50px;
+}
+
 .recipe-name {
   color: rgba(39, 37, 37, 0.726);
   text-decoration: none;
@@ -191,11 +206,6 @@ nav a:hover {
 
 .button {
   border: none;
-}
-
-.recipe-name :hover {
-  color: orangered;
-  text-decoration: none;
 }
 
 .food-container {
