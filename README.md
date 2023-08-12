@@ -31,7 +31,7 @@
 
 # 🥗🍔 Recipe App <a name="about-project"></a>
 
-**Recipe App** The Culinary Companion app is your all-in-one kitchen assistant. It helps you keep track of recipes, ingredients, and what's in your pantry. You can save ingredients, manage your supplies, create recipes, and generate shopping lists based on your inventory and recipe requirements. Enjoy cooking with ease and accuracy using the Culinary Companion.
+**Recipe App** The Culinary Companion app is your all-in-one kitchen assistant. It helps you keep track of recipes, ingredients, and what's in your pantry. You can save ingredients, manage your supplies, create recipes, and generate shopping lists based on your recipe requirements. Enjoy cooking with ease and accuracy using the Culinary Companion.
 
 ## 🛠 Built With <a name="built-with"></a>
 
