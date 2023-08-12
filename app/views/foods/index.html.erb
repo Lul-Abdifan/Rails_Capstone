@@ -16,7 +16,7 @@
    <tr class="food-row" data-food-id="<%= food.id %>">
    <td><%=food.name%></td>
    <td><%=food.measurement_unit%></td>
-   <td><%=food.price%></td>
+   <td>$<%=food.price%></td>
    <td><%= render partial: 'shared/delete_button', locals: { item: food, delete_url: food_path(food.id) } %></td>
   </tr>
 <%end%>
