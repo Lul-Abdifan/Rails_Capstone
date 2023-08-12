@@ -11,6 +11,6 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe UsersHelper, type: :helper do
-  it "Add helper function" do
+  it 'Add helper function' do
   end
 end
