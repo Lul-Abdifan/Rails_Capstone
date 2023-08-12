@@ -13,7 +13,7 @@
     <th>Actions</th>
   </tr>
   <% @foods.each do |food|%>
-  <tr>
+   <tr class="food-row" data-food-id="<%= food.id %>">
    <td><%=food.name%></td>
    <td><%=food.measurement_unit%></td>
    <td><%=food.price%></td>

@@ -2,7 +2,7 @@
 .new-user,
 .new-food {
   max-width: 400px;
-  margin: 100px auto;
+  margin: 50px auto;
   padding: 20px;
   border: 2px solid #ccc;
   border-radius: 10px;
@@ -13,6 +13,12 @@ form label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
 }
 
 form input[type="text"],
@@ -26,7 +32,7 @@ form textarea {
 
 /* Style for the form submit button */
 form input[type="submit"] {
-  background-color: rgba(255, 94, 0, 0.678);
+  background-color: rgb(119, 0, 255);
   color: #fff;
   padding: 10px 10px;
   border: none;
@@ -74,11 +80,51 @@ td:last-child {
   justify-content: end;
 }
 
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+}
+
 .add-food a {
   border: 2px solid black;
   padding: 10px;
   color: orange;
   text-decoration: none;
+}
+
+.description a {
+  text-decoration: none;
+  color: black;
+}
+
+.recipe-food-class {
+  margin-top: 30px;
+  font-size: large;
+  display: flex;
+  justify-content: space-around;
+}
+
+.recipe-food-class a {
+  text-decoration: none;
+  border: 2px solid black;
+  padding: 3px;
+}
+
+.btn-link a {
+  color: rgb(89, 153, 179);
+  text-decoration: none;
+  margin-right: 10px;
+  border: none;
+  background-color: #fff;
+}
+
+nav a:hover {
+  background-color: #43086171;
+  color: orangered;
+  font-weight: bolder;
 }
 
 .new-recipe-card {
@@ -143,19 +189,6 @@ td:last-child {
   color: rgba(27, 26, 25, 0.788);
 }
 
-.recipe-food-class {
-  margin-top: 30px;
-  font-size: large;
-  display: flex;
-  justify-content: space-around;
-}
-
-.recipe-food-class a {
-  text-decoration: none;
-  border: 2px solid black;
-  padding: 3px;
-}
-
 /* Style the links within the card */
 
 .btn-link:hover {
@@ -175,24 +208,11 @@ td:last-child {
   border: none;
 }
 
-.btn-link a {
-  color: rgb(89, 153, 179);
-  text-decoration: none;
-  margin-right: 10px;
-  border: none;
-  background-color: #fff;
-}
-
 .food-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-}
-
-.description a {
-  text-decoration: none;
-  color: black;
 }
 
 .description a:hover {
@@ -210,11 +230,6 @@ td:last-child {
   display: inline-block;
   width: 60px;
   height: 34px;
-}
-
-input,
-select {
-  width: 100%;
 }
 
 .switch input {
@@ -260,7 +275,7 @@ input:checked + .slider::before {
 }
 
 .destroy-button {
-  background-color: #f00;
+  background-color: #f00 !important;
   color: white;
   border: none;
   padding: 5px 10px;
@@ -314,7 +329,7 @@ input:checked + .slider::before {
   border: 2.6px solid #252121;
   padding: 10px;
   margin: 10px;
-  width: calc(33.33% - 20px); /* Adjust as needed for your layout */
+  width: calc(33.33% - 20px); 
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
@@ -334,4 +349,26 @@ input:checked + .slider::before {
 
 .public_name {
   text-decoration: none;
+
+nav ul {
+  list-style: none;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 5px 50px;
+  display: flex;
+  background-color: #333;
+  border-radius: 20px;
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav i {
+  margin-right: 5px;
+
 }
