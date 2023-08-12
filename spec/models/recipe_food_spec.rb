@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe RecipeFood, type: :model do
   let(:user) do
     User.create!(
-      name: "Hope",
+      name: 'Hope',
       email: 'hope@example.com',
       password: '1234567',
       password_confirmation: '1234567'

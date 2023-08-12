@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe 'Integration Testing', type: :system do
   describe 'Should render public recibi' do
     before(:each) do
-      @abdi = create(:user, name: "abdi", email: "abdi@gmail.com", password: '1234567', password_confirmation: '1234567')
+      @abdi = create(:user, name: 'abdi', email: 'abdi@gmail.com', password: '1234567',
+                            password_confirmation: '1234567')
       sign_in @abdi
     end
 
