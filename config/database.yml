@@ -14,7 +14,6 @@ development:
   <<: *default
   database: recipefood
 
-
 test:
   <<: *default
   database: recipefood_test

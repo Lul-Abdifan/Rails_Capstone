@@ -1,32 +1,59 @@
 <div class="recipe-card-container">
-  <p style="color: green"><%= notice %></p>
-  <div>
-    <h2 class="recipe-name"><%= @recipe.name %></h2>
-    <div class="recipe-show-top">
-      <div>
-        <h2>Preparation time: <%= format_time(@recipe.preparation_time) %></h2>
-        <h2>Cooking time: <%= format_time(@recipe.cooking_time) %></h2>
-        <h2><%= @recipe.description %></h2>
-      </div>
-      <div>
+
+ <div>
+ <h2 class="recipe-name"><%= @recipe.name%></h2>
+ <div class="recipe-show-top">
+ <div>
+ <h2>Preparation time: <%= format_time(@recipe.preparation_time) %></h2>
+ <h2>Cooking time: <%= format_time(@recipe.cooking_time) %></h2>
+ <h2><%=@recipe.description%></h2>
+ </div>
+ <div>
         <h2><span id="public-status"><%= @recipe.public ? 'Public' : 'Private' %></span></h2>
         <label class="switch">
           <input id="public-toggle" type="checkbox" <%= @recipe.public ? 'checked' : '' %>>
           <span class="slider <%= @recipe.public ? 'public' : '' %>"></span>
         </label>
       </div>
-    </div>
-   <div class="recipe-food-class">
-     <% if @recipe.user == current_user %>
-       <%= link_to "Add Ingredient", new_recipe_food_path(@recipe), class: 'add-ingredient' %>
-     <% end %>
-     <a href="" class="generate-shopping-list">Generate Shopping List</a>
-   </div>
+ </div>
+ <div class="recipe-food-class">
 
-  </div>
+   <% if current_user.id == @recipe.user.id%>                
+ <a href="/shopping_lists">Generate Shopping List</a>
+ 
+<a href="/recipes/<%= params[:id] %>/recipe_foods/new" class="add-ingredient">Add Ingredient</a>
 
-  <div class="recipe_d_ft">
-    <%= link_to "Back to recipes", recipes_path, class: 'btn-link' %>
+<%end%>
+ </div>
+ </div>
+ <div class="foods-for-recipe">
+<table>
+  <tr>
+    <th>Food</th>
+    <th>Quantity</th>
+    <th>Value</th>
+    <th>Actions</th>
+  </tr>
+
+  <% @recipe_foods.each do |recipe_food| %>
+    <tr>
+    <% if recipe_food.quantity && recipe_food.food %>
+      <td><%= recipe_food.food.name %></td>
+       <td><%= "#{recipe_food.quantity} #{recipe_food.food.measurement_unit}" %></td>
+       
+      <td>$ <%= recipe_food.quantity * recipe_food.food.price %></td>
+
+      <td>
+      <% if current_user.id == @recipe.user.id%> 
+      <%= button_to "Remove", recipe_recipe_food_path(recipe_food.recipe_id,recipe_food.id), method: :delete, class: "destroy-button"  %>
+      <%end%>
+      </td>
+      <%end%>
+    </tr>
+  <%end%>
+</table>
+
+ </div>
   </div>
 </div>
 

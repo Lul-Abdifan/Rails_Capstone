@@ -1,0 +1,12 @@
+<div class="recipe-index">
+
+<h1>Recipe foods</h1>
+
+<div id="recipe_foods">
+<% @recipe_foods.each do |recipe_food| %>
+  <%= render partial: 'recipe_food', locals: { recipe_food: recipe_food } %>
+  <% end %>
+</div>
+
+<%= link_to "New recipe food",new_recipe_recipe_food_path %>
+</div>

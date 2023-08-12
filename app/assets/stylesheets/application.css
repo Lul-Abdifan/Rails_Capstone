@@ -1,7 +1,8 @@
+.new-recipe-food,
 .new-user,
 .new-food {
   max-width: 400px;
-  margin: 100px auto;
+  margin: 50px auto;
   padding: 20px;
   border: 2px solid #ccc;
   border-radius: 10px;
@@ -14,10 +15,15 @@ form label {
   margin-bottom: 5px;
 }
 
+input,
+select,
+textarea {
+  width: 100%;
+}
+
 form input[type="text"],
 form textarea {
-  width: 100%;
-  padding: 10px;
+  padding: 2px 0;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -26,123 +32,12 @@ form textarea {
 
 /* Style for the form submit button */
 form input[type="submit"] {
-  background-color: #007bff;
+  background-color: rgb(119, 0, 255);
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-}
-
-form input[type="submit"]:hover {
-  background-color: #0056b3;
-}
-
-/* recipe card */
-.new-recipe-card {
-  border: 2px solid black;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 600px;
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* form */
-.form_cont {
-  display: flex;
-  justify-content: center;
-}
-
-/* edit */
-
-/* In your CSS file */
-.center-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.recipe-card {
-  padding: 0 100px;
-}
-
-.recipe-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 3px black solid;
-  margin-top: 30px;
-  padding: 0 50px;
-}
-
-.btn-link {
-  color: rgb(89, 153, 179);
-  text-decoration: none;
-  margin-right: 10px;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.recipe-show-top {
-  display: flex;
-  justify-content: space-around;
-  color: rgba(27, 26, 25, 0.788);
-}
-
-.recipe-name {
-  text-align: center;
-}
-
-.recipe-food-class {
-  margin-top: 30px;
-  font-size: large;
-  display: flex;
-  justify-content: space-around;
-}
-
-.recipe-food-class a {
-  text-decoration: none;
-  border: 2px solid black;
-  padding: 3px;
-}
-
-/* Style the links within the card */
-
-.btn-link:hover {
-  color: green;
-}
-
-.recipe_lk {
-  color: rgb(13, 13, 75);
-  text-decoration: none;
-}
-
-.recipe_lk:hover {
-  color: green;
-}
-
-.button {
-  border: none;
-}
-
-.btn-link a {
-  color: rgb(89, 153, 179);
-  text-decoration: none;
-  margin-right: 10px;
-  border: none;
-  background-color: #fff;
-}
-
-.food-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
 }
 
 .food-table {
@@ -185,6 +80,14 @@ td:last-child {
   justify-content: end;
 }
 
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+}
+
 .add-food a {
   border: 2px solid black;
   padding: 10px;
@@ -195,6 +98,121 @@ td:last-child {
 .description a {
   text-decoration: none;
   color: black;
+}
+
+.recipe-food-class {
+  margin-top: 30px;
+  font-size: large;
+  display: flex;
+  justify-content: space-around;
+}
+
+.recipe-food-class a {
+  text-decoration: none;
+  border: 2px solid black;
+  padding: 3px;
+}
+
+.btn-link a {
+  color: rgb(89, 153, 179);
+  text-decoration: none;
+  margin-right: 10px;
+  border: none;
+  background-color: #fff;
+}
+
+nav a:hover {
+  background-color: #43086171;
+  color: orangered;
+  font-weight: bolder;
+}
+
+.new-recipe-card {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* form */
+.form_cont {
+  display: flex;
+  justify-content: center;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.recipe-card {
+  padding: 0 100px;
+}
+
+.recipe-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px black solid;
+  margin-top: 30px;
+  padding: 0 50px;
+}
+
+.recipe-name {
+  color: rgba(39, 37, 37, 0.726);
+  text-decoration: none;
+  text-align: center;
+}
+
+.recipe-name:hover {
+  color: orangered;
+}
+
+.btn-link {
+  color: rgb(89, 153, 179);
+  text-decoration: none;
+  margin-right: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.recipe-show-top {
+  display: flex;
+  justify-content: space-around;
+  color: rgba(27, 26, 25, 0.788);
+}
+
+/* Style the links within the card */
+
+.btn-link:hover {
+  color: green;
+}
+
+.recipe_lk {
+  color: rgb(13, 13, 75);
+  text-decoration: none;
+}
+
+.recipe_lk:hover {
+  color: green;
+}
+
+.button {
+  border: none;
+}
+
+.food-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .description a:hover {
@@ -250,4 +268,71 @@ td:last-child {
 
 input:checked + .slider::before {
   transform: translateX(26px);
+}
+
+.foods-for-recipe {
+  padding: 30px 100px;
+}
+
+.destroy-button {
+  background-color: #f00 !important;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.destroy-button:hover {
+  background-color: #c00;
+}
+
+.shopping-header {
+  text-align: center;
+  font-size: 45px;
+  color: rgba(20, 18, 18, 0.651);
+}
+
+.shopping-list {
+  margin-top: 100px;
+  padding: 0 250px;
+}
+
+.shopping-table-header {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 25px;
+  color: rgba(20, 18, 18, 0.651);
+}
+
+.form-attribute {
+  margin: 30px 0;
+}
+
+.recipe-food-header {
+  text-align: center;
+  color: rgba(20, 18, 18, 0.651);
+}
+
+nav ul {
+  list-style: none;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 5px 50px;
+  display: flex;
+  background-color: #333;
+  border-radius: 20px;
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav i {
+  margin-right: 5px;
 }

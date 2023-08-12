@@ -1,6 +1,6 @@
 <div class="index-page">
 <div class="add-food">
-<a href="foods/new" >Add Food</a>
+<a href="/foods/new" >Add Food</a>
 </div>
 <div class="food-container">
 <div class="food-table">
@@ -13,7 +13,7 @@
     <th>Actions</th>
   </tr>
   <% @foods.each do |food|%>
-  <tr>
+   <tr class="food-row" data-food-id="<%= food.id %>">
    <td><%=food.name%></td>
    <td><%=food.measurement_unit%></td>
    <td><%=food.price%></td>

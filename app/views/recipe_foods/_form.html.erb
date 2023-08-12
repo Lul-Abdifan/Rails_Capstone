@@ -1,0 +1,30 @@
+    
+    <div class="new-recipe-food">
+   
+     <%= form_with(model: recipe_food, url: recipe_recipe_foods_path(params[:recipe_id])) do |form| %>
+  <% if recipe_food.errors.any? %>
+    <div style="color: red">
+      
+      <ul>
+        <% recipe_food.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-attribute">
+    <%= form.label :quantity, style: "display: block" %>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <div class="form-attribute">
+    <%= form.label :food_id, style: "display: block" %>
+     <%= form.collection_select :food_id, current_user.foods, :id, :name, { prompt: true }, { class: "form-control" } %>
+
+  </div>
+<div>
+    <%= form.submit %>
+  </div>
+<% end %>
+</div>
