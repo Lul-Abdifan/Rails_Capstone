@@ -4,7 +4,7 @@ RSpec.describe Recipe, type: :model do
   let!(:abdi) do
     User.create!(
       name: 'Hope',
-      email: 'a@gmail.com', # Use a valid email format
+      email: 'a@gmail.com', 
       password: '1234567',
       password_confirmation: '1234567'
     )
@@ -17,7 +17,7 @@ RSpec.describe Recipe, type: :model do
       cooking_time: 80,
       description: 'Yummy drums',
       public: false,
-      user: abdi # Use the correct user variable name
+      user: abdi 
     )
   end
 
