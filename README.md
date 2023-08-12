@@ -122,7 +122,7 @@ To run tests, run the following command:
 - Twitter: [@twitterhandle](https://twitter.com/AbdiBekele68808)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/abdi-bekele-a63860254/ )
 
-👤 Nirere Marie Christelle
+👤 **Nirere Marie Christelle**
 
 - GitHub: [@Christelle-12](https://github.com/Christelle-12)
 - Twitter: [@Chr1Nirere](https://twitter.com/Chr1Nirere)

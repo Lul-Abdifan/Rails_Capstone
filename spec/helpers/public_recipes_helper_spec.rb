@@ -10,6 +10,10 @@ require 'rails_helper'
 #     end
 #   end
 # end
-RSpec.describe PublicRecipesHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+RSpec.describe FoodsHelper, type: :helper do
+  describe '#add_helper_function' do
+    it 'does something meaningful' do
+      # Your test code here
+    end
+  end
 end

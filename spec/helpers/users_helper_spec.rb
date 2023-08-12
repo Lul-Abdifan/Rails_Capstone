@@ -10,7 +10,10 @@ require 'rails_helper'
 #     end
 #   end
 # end
-RSpec.describe UsersHelper, type: :helper do
-  it 'Add helper function' do
+RSpec.describe FoodsHelper, type: :helper do
+  describe '#add_helper_function' do
+    it 'does something meaningful' do
+      # Your test code here
+    end
   end
 end
