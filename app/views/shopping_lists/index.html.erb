@@ -1,0 +1,26 @@
+<div class="shopping">
+<h1 class="shopping-header">Shopping List</h1>
+<div class="shopping-table-header">
+
+<h3>Amount of Food items to buy: <%= @food_totals.length%></h3>
+<h3>Total value of food needed: $<%= @food_totals.values.sum { |totals| totals[:total_price] } %> </h3>
+</div>
+
+<div class="shopping-list">
+ <table>
+  <tr>
+    <th>Food</th>
+    <th>Quantity</th>
+    <th>Price</th>
+  </tr>
+<% @food_totals.each do |food_name, totals| %>
+    <tr>
+   <td><%=food_name%></td>
+    <td><%=totals[:quantity] %> <%=totals[:measurement_unit]%></td>
+   <td>$<%=totals[:total_price]%></td>
+   </tr>
+   <%end%>
+</table>
+</div>
+</div>
+</div>

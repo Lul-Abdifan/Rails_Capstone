@@ -1,0 +1,11 @@
+<div class="recipe-list" id="recipe-list-id">
+<div>
+  <h2 ><%= link_to recipe.name, recipe, class:"recipe-name" %></h2>
+  <p><strong>By:</strong> <%= recipe.user.name %></p>
+</div>
+<div>
+  <p><strong>Total Food Items:</strong> <%= recipe.total_food_items %></p>
+  <p><strong>Total Price:</strong> <%= number_to_currency(recipe.total_price) %></p>
+</div>
+ 
+</div>

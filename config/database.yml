@@ -1,0 +1,27 @@
+default: &default
+  username: hope
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: recipefood
+
+test:
+  <<: *default
+  database: recipefood_test
+  timeout: 5000
+
+development:
+  <<: *default
+  database: recipefood
+
+test:
+  <<: *default
+  database: recipefood_test
+
+production:
+  <<: *default
+  database: recipefood_production
+  username: hope

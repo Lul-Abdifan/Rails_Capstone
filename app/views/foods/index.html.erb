@@ -1,0 +1,28 @@
+<div class="index-page">
+<div class="add-food">
+<a href="/foods/new" >Add Food</a>
+</div>
+<div class="food-container">
+<div class="food-table">
+
+ <table>
+  <tr>
+    <th>Food</th>
+    <th>Measurement Unit</th>
+    <th>Unit Price</th>
+    <th>Actions</th>
+  </tr>
+  <% @foods.each do |food|%>
+   <tr class="food-row" data-food-id="<%= food.id %>">
+   <td><%=food.name%></td>
+   <td><%=food.measurement_unit%></td>
+   <td>$<%=food.price%></td>
+   <td><%= render partial: 'shared/delete_button', locals: { item: food, delete_url: food_path(food.id) } %></td>
+  </tr>
+<%end%>
+</table>
+
+
+</div>
+</div>
+</div>

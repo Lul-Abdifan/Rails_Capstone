@@ -1,0 +1,11 @@
+<div>
+  <div class="recipe-card">
+    <% if @recipes.empty? %>
+      <p>There are no recipes for new sign-ups. Kindly add one.</p>
+    <% else %>
+      <% @recipes.each do |recipe| %>
+        <%= render "recipe_index", recipe: recipe %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

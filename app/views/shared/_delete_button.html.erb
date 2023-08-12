@@ -1,0 +1,5 @@
+
+
+<%= form_with model: item, url: delete_url, method: :delete, html: { class: "delete-form" } do |form| %>
+  <%= form.submit "Delete", class: "destroy-button" %>
+<% end %>
