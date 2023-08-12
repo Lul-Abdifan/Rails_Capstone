@@ -118,7 +118,7 @@ To run tests, run the following command:
 
 👤 **Abdi Bekele**
 
-- GitHub: [@githubhandle](https://github.com/Lul-Abdifan/Rails_Capstone.git)
+- GitHub: [@githubhandle](https://github.com/Lul-Abdifan)
 - Twitter: [@twitterhandle](https://twitter.com/AbdiBekele68808)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/abdi-bekele-a63860254/ )
 
